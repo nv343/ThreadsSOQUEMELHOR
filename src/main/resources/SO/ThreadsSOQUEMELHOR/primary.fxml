@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -53,6 +52,5 @@
       </Text>
       <TextField fx:id="getMinute" layoutX="96.0" layoutY="192.0" prefHeight="25.0" prefWidth="40.0" promptText="MM" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="200.0" />
       <TextField fx:id="getSecond" layoutX="144.0" layoutY="188.0" prefHeight="25.0" prefWidth="40.0" promptText="SS" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="200.0" />
-      <Label fx:id="teste" layoutX="205.0" layoutY="82.0" text="teste" />
    </children>
 </AnchorPane>
