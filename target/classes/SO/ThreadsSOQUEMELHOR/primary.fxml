@@ -14,12 +14,12 @@
             <Font name="Consolas" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="botao" layoutX="70.0" layoutY="251.0" mnemonicParsing="false" onAction="#teste" text="AJUSTAR" AnchorPane.leftAnchor="50.0">
+      <Button fx:id="botao" layoutX="70.0" layoutY="251.0" mnemonicParsing="false" onAction="#adjustTime" text="AJUSTAR" AnchorPane.leftAnchor="50.0">
          <font>
             <Font name="Consolas" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="269.0" layoutY="192.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="check" layoutX="70.0" layoutY="324.0" mnemonicParsing="false" onAction="#showTime" text="Button" />
       <Button layoutX="269.0" layoutY="251.0" mnemonicParsing="false" text="Button" />
       <Button layoutX="269.0" layoutY="311.0" mnemonicParsing="false" text="Button" />
       <Text fx:id="secondC" layoutX="171.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SS" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="75.0">
