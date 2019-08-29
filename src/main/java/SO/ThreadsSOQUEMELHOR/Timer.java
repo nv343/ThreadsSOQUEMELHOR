@@ -2,29 +2,52 @@ package SO.ThreadsSOQUEMELHOR;
 
 import SO.ThreadsSOQUEMELHOR.SingletonTimer;
 
-public class Timer extends Thread{
+public class Timer extends Thread {
+	SingletonTimer time = SingletonTimer.getInstance();
+
 	public void run() {
-		SingletonTimer time = SingletonTimer.getInstance();
-		System.out.println("Clock. OK");
-		
-		while(true) {
+
+		System.out.println("Timer. OK");
+
+		while (true) {
 			try {
-				Thread.sleep(990);
+				Thread.sleep(999);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				return;
 			}
-			time.ss++;
-			if(time.ss==59) {
-				time.mm++;
-				time.ss=0;
+			time.second++;
+			if (time.second == 59) {
+				try {
+					Thread.sleep(999);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				time.minute++;
+				time.second = 0;
 			}
-			if(time.mm==59) {
-				time.hh++;
-				time.mm=0;
+			if (time.minute == 59) {
+				try {
+					Thread.sleep(999);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				time.hour++;
+				time.minute = 0;
+			}
+			if (time.hour == 24) {
+				try {
+					Thread.sleep(999);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				time.hour = 0;
+				time.minute = 0;
+				time.second = 0;
 			}
 		}
 	}
-
 
 }
